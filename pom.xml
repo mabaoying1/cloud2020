@@ -19,7 +19,8 @@
 		<module>cloud-provider-payment8002</module>
         <module>cloudconsumerfeignorder80</module>
 		<module>cloud-provider-payment-hystrix8001</module>
-	</modules>
+        <module>cloudconsumerfeignhystrixorder80</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
