@@ -36,4 +36,12 @@ public class PaymentController {
         return  result;
     }
 
+    //服务熔断=====    服务的降级->进而熔断->恢复调用链路
+    @GetMapping("/circuit/{id}")
+    public String paymentCircuitBreaker(@PathVariable("id")Integer id){
+        String result=paymentService.paymentCircuitBreaker(id);
+        log.info("****result:"+result);
+        return result;
+    }
+
 }
