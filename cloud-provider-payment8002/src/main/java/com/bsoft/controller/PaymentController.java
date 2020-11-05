@@ -64,6 +64,11 @@ public class PaymentController {
         return serverPort;
     }
 
+    @GetMapping(value="/lbServer")
+    public String lbServer(){
+        return serverPort;
+    }
+
     @PutMapping("/update")
     public CommonResult update(@RequestBody Payment payment){
         int result = paymentService.update(payment);
