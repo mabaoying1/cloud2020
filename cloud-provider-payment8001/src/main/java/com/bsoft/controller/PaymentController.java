@@ -80,4 +80,9 @@ public class PaymentController {
         }
     }
 
+    @GetMapping(value="/zipkin")
+    public String zipkin(){
+        return "hi,当前serverport为"+serverPort;
+    }
+
 }

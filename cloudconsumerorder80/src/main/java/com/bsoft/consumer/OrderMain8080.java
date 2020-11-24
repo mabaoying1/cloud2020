@@ -14,6 +14,7 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
+//在启动该微服务的时候就能去加载我们的自定义 Ribbon 配置类，从而使配置生效
 //@RibbonClient(name = "CLOUD-PROVIDER-SERVICE",configuration = MySelfRule.class)
 public class OrderMain8080 {
     public static void main( String[] args ) {

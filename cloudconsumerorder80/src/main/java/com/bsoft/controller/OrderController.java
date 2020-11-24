@@ -94,4 +94,15 @@ public class OrderController {
         URI uri = serviceInstance.getUri();
         return restTemplate.getForObject(uri+"/payment/getAllPayment",CommonResult.class);
     }
+
+    /**
+     * 链路监控
+     * @return
+     */
+    @GetMapping(value="/payment/zipkin")
+    public String zipkin(){
+        log.info("*******链路监控*******");
+        return restTemplate.getForObject(PAYMENT_URL+"/payment/zipkin",String.class);
+    }
+
 }
